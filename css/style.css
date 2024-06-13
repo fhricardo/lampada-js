@@ -30,4 +30,14 @@ body {
     margin: 20px;
     background-color: yellow;
     padding: 5px;
+    text-transform: uppercase;
+}
+
+.bulb {
+    width: 400px;
+    height: 421px;
+}
+
+.bulb:hover {
+    cursor: url(../assets/martelo.svg), auto;
 }

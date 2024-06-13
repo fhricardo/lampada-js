@@ -7,49 +7,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JavaScript - Lâmpada</title>
     <link rel="stylesheet" href="css/style.css">
-    <script>
-        var broken = false;
-        function changeBulb(type) {
-            if (type == 1) {
-                file = "assets/lampada-apagada.png";
-            }
-            if (type == 2) {
-                file = "assets/lampada-acesa.png";
-            }
-            if (type == 3) {
-                file = "assets/lampada-quebrada.png";
-            }
-            if (!broken) {
-                document.getElementById("bulb").src = file;
-                if (type == 3) {
-                    broken = true;
-                }
-            }
-        }
-        function changeSwitch(tipo) {
-            if (tipo == 1) {
-                img = "assets/switch-off.png"
-            }
-            if (tipo == 2) {
-                img = "assets/switch-on.png"
-            }
-            document.getElementById("switch").src = img;
-        }
-    </script>
+    <script src="js/script.js" defer></script>
 </head>
 
 <body>
     <div class="main">
         <div class="title">
             <h1>Utilize o interruptor para acender a lâmpada</h1>
-            <h3>CUIDADO! NÃO TOQUE NA LÂMPADA!</h3>
+            <h3 id="alerta">CUIDADO! NÃO TOQUE NA LÂMPADA!</h3>
         </div>
         <div class="bulb">
-            <img src="assets/lampada-apagada.png" alt="" id="bulb" onclick="changeBulb(3)">
+            <img src="assets/lampada-apagada.png" alt="" id="bulb" onclick="mudaLampada(3)">
         </div>
         <div class="switch">
-            <img src="assets/switch-off.png" alt="" id="switch" onclick="changeBulb(2)&changeSwitch(2)"
-                ondblclick="changeBulb(1)&changeSwitch(1)">
+            <img src="assets/switch-off.png" alt="" id="switch" onclick="mudaLampada(2)">
         </div>
     </div>
 </body>
